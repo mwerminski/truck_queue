@@ -1,4 +1,4 @@
-# Elevator System based on FCFS scheduling algorithm.
+# Vehicle Queue System Simulation.
 ## Table of content
 * [General info](#general-info)
 * [About structure](#about-structue)
