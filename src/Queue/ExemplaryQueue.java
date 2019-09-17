@@ -31,17 +31,13 @@ public final class ExemplaryQueue implements  VehicleQueue{
         else throw new FullQueueException(id);
     }
     @Override
-    final public void addVehicleToGate() throws NoEmptyGateException, EmptyQueueException{
+    final public void addVehicleToGate() {
         if (exitGate.getVehicle() == null && !queue.isEmpty()) {
             queue.getFirst().setStatus(Status.CHECKING);
             exitGate.setTime(queue.getFirst().getWeight() * TIME_COEFFICIENT);
             queue.getFirst().setEstimatedTime(exitGate.getTime());
             exitGate.setVehicle(queue.removeFirst());
         }
-
-        else if(exitGate.getVehicle() == null) throw new NoEmptyGateException("exit");
-
-        else throw new EmptyQueueException(id);
     }
     @Override
     final public void dispatchVehicle(){
@@ -99,7 +95,7 @@ public final class ExemplaryQueue implements  VehicleQueue{
     }
     @Override
     public final void setVehicleAtPostion(Integer position, Vehicle vehicle){
-        if(queue.size() <= position && position < 1){
+        if(queue.size() >= position && position > 1){
             queue.set(position - 1, vehicle);
         }
         else throw new InvalidPositionException(position);

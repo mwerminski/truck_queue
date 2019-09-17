@@ -16,12 +16,14 @@ public final class BasicDoubleQueueStrategy implements QueueStrategy{
     }
 
     private final void moveVehiclesToGates(VehicleQueues queues){
-        for(Integer queueId = 0; queueId < queues.getQueuesQuantity(); queueId++) {
-            try {
-                queues.getVehicleQueue(queueId).addVehicleToGate();
-            } catch (NoEmptyGateException | EmptyQueueException e) {
-                SystemLogger.logException(e);
-            }
+        for(Integer queueId = 0; queueId < queues.getQueuesQuantity(); queueId++){
+            if(queues.getVehicleQueue(queueId).isGateEmpty() && !queues.getVehicleQueue(queueId).isFull())
+                try {
+                    queues.getVehicleQueue(queueId).addVehicleToGate();
+                }
+                catch(NoEmptyGateException | EmptyQueueException e){
+                    SystemLogger.logException(e);
+                }
         }
     }
 
