@@ -14,7 +14,7 @@ The `QueueSystem` abstract class in 'SysSim' package contains 4 methods that can
 * `status()` - should display and return basic system info in String object,
 * `step()` - creates step of simulation in time unit, in my implementation it runs controller to manage queue and dispatch ready trucks; Also it updates vehicle map,
 * `arrive(Vehicle vehicle)` - it should simulate arrival of new vehicle,
-* 'vehicleWaitingTime(Integer vehicleId)' - returns truck's timeleft,
+* `vehicleWaitingTime(Integer vehicleId)` - returns truck's timeleft,
 
 The fields of `QueueSystem`:
 * `entryGate` - this object represents common entry gate, 
@@ -28,11 +28,14 @@ The `QueueStrategy` interface contains only one method which should manage queue
 
 The `VehicleQueues` class contains all objects implementing VehicleQueue interface and provides simple methods to manage them
 
-The `VehicleQueue' interface provides methods to manage vehicle objects in queue 
+The `VehicleQueue` interface provides methods to manage vehicle objects in queue 
 
 ## About structure - less important classes and interfaces
+
 The `Gate` class is a simple representation of gates in queues
+
 The `Vehicle` abstract class represents vehicle object with basic methods
+
 The enum `Status` represents vehicle status in this simulation
 
 ## Simulations
@@ -48,7 +51,7 @@ To run this project, just compile and build; Simulation playground is placed in 
 * borderCrossingSystem.arrive(truck1);  - now entry gate is empty, we can add another truck
 * borderCrossingSystem.systemStatus();  - lets print some info
 * borderCrossingSystem.step();          - the first truck is now in exit gate with "CHECKING" status, second one should be in queue
-* borderCrossingSystem.step();          - the first one leaves exit gates with "LEAVING" status, second should be in exit gate
+* borderCrossingSystem.step();          - the first one leaves exit gates with "LEAVING" status, second one should be in exit gate
 
 ## TODO
 - Some unit tests,
