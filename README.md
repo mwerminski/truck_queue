@@ -39,10 +39,10 @@ The enum `Status` represents vehicle status in this simulation
 To run this project, just compile and build; Simulation playground is placed in Simulation class in start() method - you can use all derived methods from QueueSystem
 
 ### Example
-borderCrossingSystem.systemStatus();  - print some info about system
+'borderCrossingSystem.systemStatus();  - print some info about system
 borderCrossingSystem.arrive(truck);   - add new truck(track status is ARRIVING) to entry gate
 borderCrossingSystem.systemStatus();  - print some info (the vehicle shoud be still "invisible" for the system)
-borderCrossingSystem.step();          - make one unit time step (takes arriving vehicle from entry gate,
+borderCrossingSystem.step();'          - make one unit time step (takes arriving vehicle from entry gate,
                                         moves vehicle in queue, puts first vehicle to empty exit gate);
                                         our truck is now in queue on postition 1 with setted "WAITING" status
 borderCrossingSystem.arrive(truck1);  - now entry gate is empty, we can add another truck
