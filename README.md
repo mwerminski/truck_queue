@@ -1,4 +1,4 @@
-# Vehicle Queue System Simulation.
+# Vehicle Queue System Simulation
 ## Table of content
 * [General info](#general-info)
 * [About structure](#about-structue)
