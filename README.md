@@ -7,7 +7,7 @@
 * [TODO](#TODO)
 
 ## General info
-This project represents simple vehicle queue simulation with examplary management
+This project represents simple vehicle queue simulation with examplary management and it is created only for learning purposes.
 	
 ## About structure - most important classes and interfaces
 The `QueueSystem` abstract class in 'SysSim' package contains 4 methods that can be use to make a simulation(It is extedned by BorderCrossingSystem class):
